@@ -1,7 +1,6 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import DashboardScreen from '../screens/DashboardScreen';
 import Icon from '@react-native-vector-icons/fontawesome'
-import { TouchableOpacity } from 'react-native';
 
 const Tab = createBottomTabNavigator()
 

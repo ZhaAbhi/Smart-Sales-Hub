@@ -1,12 +1,33 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import HamburgerMenu from '../components/Hamburger';
 
 const DashboardScreen: React.FC=()=>{
     return(
-        <View>
-            <Text>This is dashboard screen</Text>
+        <View style={{flex:1, padding:20}}>
+            <View style={styles.header}>
+              <HamburgerMenu/>
+                <View>
+                    <Text style={styles.dashboard}>Dashboard</Text>
+                </View>
+            </View>
+           
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    header:{
+     flexDirection:'row', 
+     justifyContent:'space-between',
+     alignItems:'center'
+    },
+
+    dashboard:{
+     fontSize:25,
+     color:'black',
+     letterSpacing:1.5
+    }
+})
 
 export default DashboardScreen;
