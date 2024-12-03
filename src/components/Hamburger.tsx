@@ -13,7 +13,7 @@ const HamburgerMenu:React.FC=()=>{
 
 const styles= StyleSheet.create({
     menu:{
-     backgroundColor:'black', 
+     borderColor:'#D3B683',
      marginVertical:'6%', 
      borderWidth:1.4, 
      borderRadius:25

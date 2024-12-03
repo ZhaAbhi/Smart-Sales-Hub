@@ -1,9 +1,13 @@
 import React from 'react';
-import Main from './src/main'
+import { StatusBar, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import MyTabs from './src/navigation/DashboardNavigator';
 
 const App: React.FC=()=>{
   return(
-    <Main/>
+    <NavigationContainer>
+      <MyTabs/>
+    </NavigationContainer>
   )
 }
 

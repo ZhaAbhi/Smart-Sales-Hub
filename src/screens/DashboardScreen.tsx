@@ -1,17 +1,16 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import HamburgerMenu from '../components/Hamburger';
+import SalesChart from '../components/SalesChart';
+import DashboardHeader from '../components/DashboardHeader';
 
 const DashboardScreen: React.FC=()=>{
     return(
-        <View style={{flex:1, padding:20}}>
-            <View style={styles.header}>
-              <HamburgerMenu/>
-                <View>
-                    <Text style={styles.dashboard}>Dashboard</Text>
-                </View>
+        <View style={{flex:1, backgroundColor:'#192841'}}>
+        <View style={{padding:20}}>
+            <DashboardHeader/>
+            <SalesChart/>
             </View>
-           
         </View>
     )
 }
@@ -22,11 +21,10 @@ const styles = StyleSheet.create({
      justifyContent:'space-between',
      alignItems:'center'
     },
-
     dashboard:{
      fontSize:25,
-     color:'black',
-     letterSpacing:1.5
+     color:'#D3B683',
+     letterSpacing:1.5,
     }
 })
 
