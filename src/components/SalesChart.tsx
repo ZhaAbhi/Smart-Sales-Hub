@@ -12,8 +12,9 @@ import {
 
 const SalesChart: React.FC=()=>{
     return(
-        <View style={{alignItems:'center'}}>
-  <Text>Bezier Line Chart</Text>
+        <View style={{ marginTop:30}}>
+            <Text style={{color:'lightgrey', fontWeight:'condensedBold', fontSize:16}}>Shop Valuation Growth</Text>
+        <View style={{alignItems:'center', marginTop:20}}>
   <LineChart
     data={{
       labels: ["January", "February", "March", "April", "May", "June"],
@@ -30,15 +31,15 @@ const SalesChart: React.FC=()=>{
         }
       ]
     }}
-    width={Dimensions.get('window').width - 30}
-    height={200}
-    yAxisLabel="$"
+    width={Dimensions.get('window').width - 50}
+    height={190}
+    yAxisLabel="Rs."
     yAxisSuffix="k"
     yAxisInterval={1}
     chartConfig={{
-      backgroundColor: "#e26a00",
-      backgroundGradientFrom: "#fb8c00",
-      backgroundGradientTo: "#ffa726",
+      backgroundColor: "#192841",
+      backgroundGradientFrom: "#192841",
+      backgroundGradientTo: '#192841',
       decimalPlaces: 2,
       color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
       labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
@@ -58,6 +59,7 @@ const SalesChart: React.FC=()=>{
     }}
   />
 </View>
+      </View>
     )
 }
 
