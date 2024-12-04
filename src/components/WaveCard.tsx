@@ -30,7 +30,7 @@ const WaveCard: React.FC<WaveCardProps> = ({ title, value, date, iconName,  }) =
 const styles = StyleSheet.create({
   main: {
     width: '100%',
-    height: '17%',
+    height: '15%',
     backgroundColor: 'rgba(106, 197, 254, 0.1)',
     borderRadius: 22,
     padding: 15,
