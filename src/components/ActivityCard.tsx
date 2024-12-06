@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import Icon from '@react-native-vector-icons/fontawesome6'
 
-const ActivityCard: React.FC = ({iconName, date, item, itemCount})=>{
+const ActivityCard: React.FC = ({iconName, date, item, itemCount, onPress})=>{
     return(
-        <View style={{ marginRight:10}}>
+        <TouchableOpacity onPress = {onPress} style={{ marginRight:10}}>
             <View style={{ padding:8, marginTop:10,backgroundColor: 'rgba(106, 197, 254, 0.1)',borderRadius: 22,}}>
                 <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-around'}}>
                     <View style={{height:40, width:40, borderRadius:25, borderWidth:1, borderColor:'#D3B683', justifyContent:'center', alignItems:'center'}}>
@@ -16,7 +16,7 @@ const ActivityCard: React.FC = ({iconName, date, item, itemCount})=>{
                     </View>
                 </View>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 

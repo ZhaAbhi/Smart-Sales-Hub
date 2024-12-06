@@ -7,8 +7,10 @@ import WaveCard from '../components/WaveCard';
 import DatePicker from '../components/DatePicker';
 import ActivityCard from '../components/ActivityCard';
 import AppButton from '../components/AppButton';
+import { useNavigation } from '@react-navigation/native';
 
 const DashboardScreen: React.FC=()=>{
+    const {navigate} = useNavigation();
     return(
         <View style={{flex:1, backgroundColor:'#192841'}}>
         <View style={{padding:20}}>
@@ -23,9 +25,9 @@ const DashboardScreen: React.FC=()=>{
             <Text style={{color:'lightgrey', fontWeight:'condensedBold', fontSize:16, marginTop:20}}>Today Activities</Text>
             {/* TODO: Replace with the actual data */}
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-             <ActivityCard iconName="file-circle-plus" item="added" date="3 min ago" itemCount="20"/>
-               <ActivityCard iconName="user-group" item="visit" date="2 min ago" itemCount="18"/>
-                 <ActivityCard iconName="indian-rupee-sign" item="item" date="1 min ago" itemCount="6"/>
+             <ActivityCard onPress={()=>navigate('Product')} iconName="file-circle-plus" item="added" date="3 min ago" itemCount="20"/>
+               <ActivityCard onPress={()=>navigate('Product')} iconName="user-group" item="visit" date="2 min ago" itemCount="18"/>
+                 <ActivityCard onPress={()=>navigate('Product')} iconName="indian-rupee-sign" item="item" date="1 min ago" itemCount="6"/>
             </ScrollView>
             </View>
         </View>

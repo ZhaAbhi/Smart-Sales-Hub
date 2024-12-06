@@ -4,6 +4,7 @@ import Icon from '@react-native-vector-icons/fontawesome'
 import ProductDetailScreen from '../screens/ProductDetailScreen';
 import CustomerDueListScreen from '../screens/CustomerDueListScreen';
 import NotificationScreen from '../screens/NotificationScreen';
+import ShopAISuggestionScreen from '../screens/ShopAISuggestionScreen';
 
 const Tab = createBottomTabNavigator()
 
@@ -15,6 +16,7 @@ const MyTabs = () => {
           const icons: Record<string, any> = {
             Dashboard: 'home',
             Product: 'cart-plus',
+            ShopSuggestion: 'camera',
             Due:'clock-o',
             Notification:'bell'
           };
@@ -27,11 +29,13 @@ const MyTabs = () => {
           );
         },
         tabBarShowLabel: false,
-        headerShown:false
+        headerShown:false,
+        tabBarActiveTintColor:'#192841'
       })}
     >
       <Tab.Screen name="Dashboard" component={DashboardScreen} />
         <Tab.Screen name="Product" component={ProductDetailScreen} />
+        <Tab.Screen name='ShopSuggestion' component={ShopAISuggestionScreen} options={{tabBarIconStyle:{height:50, width:50, borderWidth:2, borderRadius:25, backgroundColor:'#fff', position:'absolute', top:-8, borderColor:'#fff'}}}/>
          <Tab.Screen name="Due" component={CustomerDueListScreen} />
           <Tab.Screen name="Notification" component={NotificationScreen} />
     </Tab.Navigator>
