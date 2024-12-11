@@ -44,7 +44,7 @@ const FloatingActionButton = ({ expanded, index, buttonLetter, onPress }) => {
   );
 };
 
-export default function ActionButton({buttonLabel, actions, expanded}) {
+export default function ActionButton({actions, expanded}) {
 
   const handlePress = () => {
     expanded.value = !expanded.value;

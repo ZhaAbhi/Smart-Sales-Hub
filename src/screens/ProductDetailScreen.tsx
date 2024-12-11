@@ -14,6 +14,7 @@ import ProductAnalyticsScreen from './ProductAnalyticsScreen';
 import CustomHeader from '../components/CustomHeader';
 import { useNavigation } from '@react-navigation/native';
 import { useSharedValue } from 'react-native-reanimated';
+import AddProductForm from './AddProductForm';
 const routes = [
   { key: 'product', title: 'Products' },
   { key: 'analytics', title: 'Analytics' }
@@ -93,9 +94,7 @@ const ProductDetailScreen: React.FC = () => {
         transparent={true}
         onRequestClose={() => setAddProductModalVisible(false)}
       >
-        <View style={{flex:1, backgroundColor:'#fff'}}>
-            <CustomHeader title="Add Product Details" onPress={handleModalClose}/>
-        </View>
+       <AddProductForm  onCloseModalPress={handleModalClose}/>
       </Modal>
       </View>
      
