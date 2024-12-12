@@ -101,7 +101,9 @@ const defaultValues = fields.reduce((acc, field) => {
     control,
     errors,
     handleSubmit: handleSubmit(onSubmit),
-    renderFormFields
+    renderFormFields,
+    hasErrors: Object.keys(errors).length > 0,
+    defaultValues
   }
 }
 

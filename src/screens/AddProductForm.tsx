@@ -1,12 +1,15 @@
-import React from 'react';
-import { View, ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, ScrollView, StyleSheet, Text, TouchableOpacity, Modal } from 'react-native';
 import { z } from 'zod';
 
 import { useCustomForm } from '../hooks/useCustomForm';
 import CustomHeader from '../components/CustomHeader';
 import AppTextInput from '../components/AppTextInput';
+import AppButton from '../components/AppButton';
+import AppImagePicker from '../components/AppImagePicker';
 
 const AddProductForm: React.FC<{ onCloseModalPress: () => void }> = ({ onCloseModalPress }) => {
+  const [modalVisible, setModalVisible] = useState(false)
   const productFields = [
     {
       name: 'productName',
@@ -55,7 +58,9 @@ const AddProductForm: React.FC<{ onCloseModalPress: () => void }> = ({ onCloseMo
 
   const { 
     handleSubmit, 
-    renderFormFields 
+    renderFormFields,
+    hasErrors,
+    defaultValues
   } = useCustomForm(productFields, handleProductSubmit);
 
   return (
@@ -70,6 +75,7 @@ const AddProductForm: React.FC<{ onCloseModalPress: () => void }> = ({ onCloseMo
           <TouchableOpacity 
             style={styles.submitButton} 
             onPress={handleSubmit}
+            disabled={hasErrors}
           >
             <Text style={styles.submitButtonText}>Add Product</Text>
           </TouchableOpacity>
