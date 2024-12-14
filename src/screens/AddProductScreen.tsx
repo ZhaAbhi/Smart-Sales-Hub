@@ -1,15 +1,15 @@
 import React, {memo} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import ActionButton from '../components/ActionButton';
 import DropDownPicker from '../components/DropDownPicker';
 import AppImagePicker from '../components/AppImagePicker';
+import ProductCard from '../components/ProductCard';
 
 const AddProductScreen: React.FC =()=>{
     return(
-        <View style={{flex:1}}>
-       {/* <DropDownPicker/> */}
-       <AppImagePicker/>
-        </View>
+        <ScrollView style={{flex:1}}>
+     <ProductCard/>
+        </ScrollView>
     )
 }
 

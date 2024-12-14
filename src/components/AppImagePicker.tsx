@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         padding: 10,
+        marginTop:15,
     },
     uploadButton: {
         height: 70, 

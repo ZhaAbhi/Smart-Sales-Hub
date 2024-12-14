@@ -87,7 +87,7 @@ const ProductDetailScreen: React.FC = () => {
       <View style={styles.actionButtonContainer}>
         <ActionButton actions={floatingActions} expanded = {isExpanded} />
       </View>
-      <View style={{flex:1}}>
+      <View style={{flex:1, position:'absolute'}}>
         <Modal
         visible={addProductModalVisible}
         animationType="slide"

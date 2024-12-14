@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, TouchableOpacity, StyleSheet} from 'react-native';
 
-const HamburgerMenu:React.FC=()=>{
+const HamburgerMenu:React.FC=({onPress})=>{
     return(
-         <TouchableOpacity>
+         <TouchableOpacity onPress={onPress} >
             <View style={[ styles.menu, {width:30}]}></View>
             <View style={[ styles.menu, {width:35}]}></View>
             <View style={[ styles.menu, {width:20}]}></View>

@@ -11,6 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const DashboardScreen: React.FC=()=>{
     const {navigate} = useNavigation();
+    const navigation = useNavigation()
     return(
         <View style={{flex:1, backgroundColor:'#192841'}}>
         <View style={{padding:20}}>

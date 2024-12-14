@@ -89,18 +89,23 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
         flexDirection: 'row', 
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingLeft:10,
+        paddingRight:10,
+        marginTop:20,
     },
     input: {
-        height: 40,
-        backgroundColor: '#FFF',
+       
+        //backgroundColor: '#FFF',
+        borderWidth:1,
+        borderColor:'#000',
         borderRadius: 40,
         padding: 10,
         flex: 1
     },
     dropdownIcon: {
         position: 'absolute', 
-        right: 10
+        right: 12
     },
     dropdownList: {
         paddingLeft: 14, 
