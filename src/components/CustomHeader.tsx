@@ -1,10 +1,8 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import AppButton from './AppButton';
-import { useNavigation } from '@react-navigation/native';
 
 const CustomHeader = ({title, onPress})=>{
-    const navigation = useNavigation()
     return(
         <View style={styles.container}>
             <View style={styles.backButtonContainer}>
