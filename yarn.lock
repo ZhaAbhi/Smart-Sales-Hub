@@ -1682,6 +1682,13 @@
   dependencies:
     "@react-native-vector-icons/common" "^11.0.0"
 
+"@react-native-vector-icons/ionicons@^7.4.0":
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@react-native-vector-icons/ionicons/-/ionicons-7.4.0.tgz#260243b4ae05f2ea05c723def1179314d8e16c9b"
+  integrity sha512-Jzqd5HITWNBNJMzg/88PVdz7mZVYSx0eRovI+ziN3r97bLZDzoDgHPI6YWVTT5bk4lPxm0ojP1//+5e5ztVAag==
+  dependencies:
+    "@react-native-vector-icons/common" "^11.0.0"
+
 "@react-native/assets-registry@0.76.3":
   version "0.76.3"
   resolved "https://registry.yarnpkg.com/@react-native/assets-registry/-/assets-registry-0.76.3.tgz#c31e91b6f60fed7b0bfc1af617e3a61218d1ec08"
