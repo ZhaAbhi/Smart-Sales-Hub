@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import Icon from '@react-native-vector-icons/ionicons';
 import RightActionIcon from '@react-native-vector-icons/fontawesome'
 import ReanimatedSwipeable from 'react-native-gesture-handler/ReanimatedSwipeable';
@@ -24,7 +24,7 @@ const RightAction:React.FC<{prog: SharedValue<number>, drag: SharedValue<number>
     )
 }
 
-const ProductCard:React.FC<{item:any}> = ({item})=>{
+const ProductCard:React.FC<{item:any}> = ({item, onPress})=>{
     return(
         <GestureHandlerRootView>
             <ReanimatedSwipeable
@@ -32,7 +32,7 @@ const ProductCard:React.FC<{item:any}> = ({item})=>{
              renderRightActions={RightAction}
             
             >
-        <View style={{flex:1, padding:15}}>
+        <TouchableOpacity onPress={onPress} style={{flex:1, padding:15}}>
         <View style={{ backgroundColor: 'rgba(106, 197, 254, 0.1)', borderRadius:10}}>
            <View style={{padding:10}}>
             <View style={{flexDirection:'row', alignItems:'center', marginBottom:8, justifyContent:'space-between'}}>
@@ -48,7 +48,7 @@ const ProductCard:React.FC<{item:any}> = ({item})=>{
             <Text numberOfLines={2} style={{color:'darkgrey'}}>{item.description}</Text>
            </View>
         </View>
-        </View>
+        </TouchableOpacity>
         </ReanimatedSwipeable>
         </GestureHandlerRootView>
     )

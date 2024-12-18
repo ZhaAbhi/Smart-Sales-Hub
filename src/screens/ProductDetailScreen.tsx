@@ -15,8 +15,10 @@ import CustomHeader from '../components/CustomHeader';
 import { useNavigation } from '@react-navigation/native';
 import { useSharedValue } from 'react-native-reanimated';
 import AddProductForm from './AddProductForm';
+import ProductCategoryScreen from './ProductCategoryScreen';
 const routes = [
   { key: 'product', title: 'Products' },
+   { key: 'category', title: 'Categories' },
   { key: 'analytics', title: 'Analytics' }
 ];
 
@@ -24,6 +26,8 @@ const renderScene = ({ route }) => {
   switch (route.key) {
     case 'product':
       return <AddProductScreen />;
+       case 'category':
+      return <ProductCategoryScreen />;
     case 'analytics':
       return <ProductAnalyticsScreen />;
     default:
