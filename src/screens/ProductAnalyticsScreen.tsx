@@ -1,6 +1,7 @@
 import { PieChart } from "react-native-gifted-charts";
-import {View, Text} from 'react-native'
+import {View, Text, ScrollView} from 'react-native'
 import RevenueCard from "../components/RevenueCard";
+import DailyProductAnalyticsCard from "../components/DailyProductAnalyticsCard";
 
 const ProductAnalyticsScreen = () => {
   const pieData = [
@@ -76,12 +77,10 @@ const renderLegendComponent = () => {
 };
 
 return (
-  <View
+  <ScrollView
     style={{
       backgroundColor: '#192841',
       flex: 1,
-      paddingLeft:20, 
-      paddingRight:20
     }}>
     <View
       style={{
@@ -118,9 +117,12 @@ return (
       {renderLegendComponent()}
     </View>
     <View style={{paddingLeft:20, paddingRight:20}}>
+    <DailyProductAnalyticsCard/>
+     <DailyProductAnalyticsCard/>
+      <DailyProductAnalyticsCard/>
     <RevenueCard/>
     </View>
-  </View>
+  </ScrollView>
   
 );
 }

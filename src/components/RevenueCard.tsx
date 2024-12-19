@@ -48,10 +48,11 @@ const RevenueCard:React.FC=()=>{
             <BarChart
             showYAxisIndices
             hideRules
-            noOfSections={4}
+            noOfSections={5}
+            noOfVerticalLines={6}
             maxValue={400}
             data={barData}
-            barWidth={30}
+            barWidth={48}
             sideWidth={15}
             isThreeD 
             side="right"

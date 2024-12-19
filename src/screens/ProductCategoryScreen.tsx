@@ -10,7 +10,7 @@ const ProductCategoryScreen: React.FC =()=>{
          keyExtractor={(item:any)=>item.id}
          renderItem={({item})=><CategoryCard item={item}/>}
          showsVerticalScrollIndicator={false}
-         style={{paddingLeft:10, paddingRight:10}}
+         style={{padding:15, paddingBottom:2}}
         />
     )
 }

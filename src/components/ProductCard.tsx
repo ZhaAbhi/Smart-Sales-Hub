@@ -32,9 +32,9 @@ const ProductCard:React.FC<{item:any}> = ({item, onPress})=>{
              renderRightActions={RightAction}
             
             >
-        <TouchableOpacity onPress={onPress} style={{flex:1, padding:15}}>
+        <TouchableOpacity onPress={onPress} style={{flex:1, padding:15, paddingBottom:2}}>
         <View style={{ backgroundColor: 'rgba(106, 197, 254, 0.1)', borderRadius:10}}>
-           <View style={{padding:10}}>
+           <View style={{padding:20}}>
             <View style={{flexDirection:'row', alignItems:'center', marginBottom:8, justifyContent:'space-between'}}>
                 <View style={{flexDirection:"row"}}>
                   <Text style={{color:'#FFF', fontWeight:'bold', fontSize:16, marginRight:10}}>{item.name}</Text>
