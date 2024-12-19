@@ -1,11 +1,17 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, FlatList} from 'react-native';
+import CategoryCard from '../components/CategoryCard';
+import { categoryData } from '../assets/categoryData';
 
 const ProductCategoryScreen: React.FC =()=>{
     return(
-        <View>
-            <Text>This is list of added product category </Text>
-        </View>
+        <FlatList
+         data={categoryData}
+         keyExtractor={(item:any)=>item.id}
+         renderItem={({item})=><CategoryCard item={item}/>}
+         showsVerticalScrollIndicator={false}
+         style={{padding:10, marginVertical:10}}
+        />
     )
 }
 

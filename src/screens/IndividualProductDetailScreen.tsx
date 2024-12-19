@@ -1,9 +1,11 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {Text, View} from 'react-native';
-import Animated from 'react-native-reanimated';
 
 
-const IndividualProductDetailScreen:React.FC=()=>{
+const IndividualProductDetailScreen:React.FC<{route:any}>=({route})=>{
+    const id = route.params;
+    console.log(id)
     return(
         <View >
             <Text>This is product detail screen</Text>

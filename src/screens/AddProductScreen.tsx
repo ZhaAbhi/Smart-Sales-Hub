@@ -14,7 +14,7 @@ const AddProductScreen: React.FC =()=>{
             <FlatList
              data={productData}
              keyExtractor={(item:any)=>item.id}
-             renderItem={({item})=><ProductCard item={item} onPress={()=>navigate('productDetail')}/>}
+             renderItem={({item})=><ProductCard item={item} onPress={()=>navigate('productDetail', {id: item.id})}/>}
              showsVerticalScrollIndicator={false}
             />
     )
